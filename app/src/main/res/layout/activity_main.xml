@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_activity_background"
+    android:theme="@android:style/Theme.DeviceDefault.Wallpaper.NoTitleBar"
+    tools:context=".MainActivity"
+
+    tools:layout_editor_absoluteX="-1dp"
+    tools:layout_editor_absoluteY="-3dp">
+
+
+<!-- Bottom bar, containing activity buttons  -->
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="300sp"
+        android:layout_height="80sp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="50dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+<!--     Settings button !NOT ADDED YET!-->
+        <ImageButton
+            android:id="@+id/left_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/next_versions_settings_screen"
+            android:scaleType="centerInside"
+            android:src="@drawable/settings_icon"
+            app:tint="#FFFFFF"
+            tools:src="@drawable/settings_icon" />
+
+<!--     Selection of subject button   -->
+        <ImageButton
+            android:id="@+id/center_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/changing_to_selection_xml_layout"
+            android:onClick="setSelectionView"
+            android:scaleType="centerInside"
+            android:src="@drawable/bar_icon_center"
+            tools:src="@drawable/bar_icon_center" />
+
+<!--     Schedule button !NOT ADDED YET!-->
+        <ImageButton
+            android:id="@+id/right_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/next_versions_schedule_screen"
+            android:scaleType="centerInside"
+            android:src="@drawable/calendar_icon"
+            app:tint="#FFFFFF"
+            tools:src="@drawable/calendar_icon" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

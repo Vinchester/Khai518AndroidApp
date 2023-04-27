@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">KhaiApp</string>
+    <string name="select_subject">Select subject</string>
+    <string name="selectiontodo">selectionToDo</string>
+    <string name="changing_to_selection_xml_layout">Changing to selection.xml layout</string>
+    <string name="next_versions_settings_screen">NEXT_VERSIONS(SETTINGS screen)</string>
+    <string name="next_versions_schedule_screen">NEXT VERSIONS(Schedule screen)</string>
+</resources>
