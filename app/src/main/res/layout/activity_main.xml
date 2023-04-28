@@ -2,17 +2,34 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/task_1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_activity_background"
     android:theme="@android:style/Theme.DeviceDefault.Wallpaper.NoTitleBar"
-    tools:context=".MainActivity"
 
+    tools:context=".MainActivity"
     tools:layout_editor_absoluteX="-1dp"
     tools:layout_editor_absoluteY="-3dp">
 
+    <!-- Tasks screen, tasks will be added via MainActivity.setMainView(loop)    -->
+    <LinearLayout
+        android:id="@+id/tasks_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,NotSibling,UnknownId">
 
-<!-- Bottom bar, containing activity buttons  -->
+    </LinearLayout>
+
+
+    <!-- Bottom bar, containing activity buttons  -->
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="300sp"
@@ -20,18 +37,20 @@
         android:layout_marginStart="55dp"
         android:layout_marginEnd="55dp"
         android:layout_marginBottom="50dp"
-        android:background="#000000"
+        android:background="@drawable/reactangle_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
 
-<!--     Settings button !NOT ADDED YET!-->
+
+        <!--     Settings button !NOT ADDED YET!-->
         <ImageButton
             android:id="@+id/left_button"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:layout_marginStart="10dp"
             android:background="@android:color/transparent"
             android:contentDescription="@string/next_versions_settings_screen"
             android:scaleType="centerInside"
@@ -39,7 +58,7 @@
             app:tint="#FFFFFF"
             tools:src="@drawable/settings_icon" />
 
-<!--     Selection of subject button   -->
+        <!--     Selection of subject button   -->
         <ImageButton
             android:id="@+id/center_button"
             android:layout_width="80dp"
@@ -52,12 +71,13 @@
             android:src="@drawable/bar_icon_center"
             tools:src="@drawable/bar_icon_center" />
 
-<!--     Schedule button !NOT ADDED YET!-->
+        <!--     Schedule button !NOT ADDED YET!-->
         <ImageButton
             android:id="@+id/right_button"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
             android:background="@android:color/transparent"
             android:contentDescription="@string/next_versions_schedule_screen"
             android:scaleType="centerInside"
